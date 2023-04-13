@@ -27,4 +27,6 @@ jobs:
       run: npm run test:integration
     - name: Run unit tests and generate coverage report
       working-directory: client
-    
+      run: |
+        npm run test:unit
+        npm run test:coverage
