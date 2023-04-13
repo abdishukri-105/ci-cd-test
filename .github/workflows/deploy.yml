@@ -1,4 +1,4 @@
-name: CI/CD with React and Rails
+name: CI/CD with React
 
 on:
   push:
@@ -17,7 +17,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: '16.x'
+          node-version: '14.x'
       - name: Install dependencies
         run: |
           cd client
@@ -37,3 +37,4 @@ jobs:
       - run: cd api && bundle install
       - run: cd api && bundle exec rails db:migrate RAILS_ENV=test
       - run: cd api && bundle exec rspec spec
+   
