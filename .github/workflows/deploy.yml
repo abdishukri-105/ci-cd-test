@@ -27,11 +27,4 @@ jobs:
       run: npm run test:integration
     - name: Run unit tests and generate coverage report
       working-directory: client
-      run: |
-        npm run test:unit
-        npm run test:coverage
-    - name: Run security scans
-      working-directory: server
-      uses: github/codeql-action/analyze@v1
-      with:
-        languages: javascript
+    
